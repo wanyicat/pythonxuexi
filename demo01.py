@@ -18,4 +18,5 @@
 # a = input("字符1输入：")
 # b = input("字符2输入：")
 # print("字数：",len(a+b))
-
+p = (2,4,5,7,"老北京鸡肉卷","东坡扣肉","AE86",True,False)
+print(p[4])                         
