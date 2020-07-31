@@ -42,18 +42,90 @@
                 #   '''数组的使用'''
 #元组是使用（） 数组是使用[]
 #元组写好后不能修改，数组可以
-u = [5,8,6,"辣子鸡块","番茄炒蛋",True,False]
-u.append("我是一根柴") #append可以进行追加，在元素最后面。
-print(u)
-"""dsadasdsa"""
-'''dasdsacadas'''
-print(u[2:5])
-u.insert(3,"干炒牛河") #insert可以进行插入，任意位置。
-print(u)
-print("1+1")
-u.pop(2) #pop是剪切
-print(u)
-x = u.pop(2)
-y = u.pop(1)
+# u = [5,8,6,"辣子鸡块","番茄炒蛋",True,False]
+# u.append("我是一根柴") #append可以进行追加，在元素最后面。
+# print(u)
+# """dsadasdsa"""
+# '''dasdsacadas'''
+# print(u[2:5])
+# u.insert(3,"干炒牛河") #insert可以进行插入，任意位置。
+# print(u)
+# print("1+1")
+# u.pop(2) #pop是剪切
+# print(u)
+# x = u.pop(2)
+# y = u.pop(1)
+# print(x)
+# print(y)
+# a = ["京酱肉丝",'AE86',666,9527,True,False,"馄饨",'酸辣面片汤']
+# b = [a,"周杰伦","张学友","糖醋排骨",123321]
+'''b.append(666)           append是最后面追加元素
+b.insert(3,"test")      insert是插入元素
+c = a.pop(2)            pop是剪切
+d = b.pop(-1)
+print(b)
+x = a[2]
+y = b[5]               注意：元组不可更改，数组可以。
+print(c)                     元组是使用（）数组是使用[]
+print(d)
 print(x)
 print(y)
+print(x+y+c+d)
+print(len(a[0]))         len是计算长度
+print(a.index('馄饨'))   index是找到下标
+print(type(True))        type是找到格式
+print(a.count(False))    count是统计数量'''
+# a.clear()
+# print(a)
+# e = ["我们老北京儿阿","起来就是这么一出","真是盖了帽了，我的老北鼻"]
+# a.extend(e)         extend是在数组中添加数组
+# print(a)
+# print(e)
+# f = a+e
+# print(f)
+# print(a)
+# a.pop(0)
+# print(a)
+# print(a.pop(0))
+# print(a)
+# print(e)
+# print(e.pop(0))
+# a = ["京酱肉丝",'AE86',666,9527,True,False,"馄饨",'酸辣面片汤']
+# b = [a,"周杰伦","张学友","糖醋排骨",123321]
+# a.remove("馄饨") remove是删除，相比于pop而言remove没有赋值功能
+# print(a)
+# c = [0,False,1,True]
+# print(c.index(0))   
+# print(c.count(0))   
+'''在编程中false=0 true=1'''
+# b.insert(2,"郭富城")  2代表插入的位置 郭富城代表插入的字符
+# print(b)
+'''
+所有的方法都是小括号结尾，比如print() input() len() pop()
+元组，数组，字典，的取值都是用中括号，比如a[1] b[2]
+元组，数组，字典，的定义分别为() [] {}
+'''
+'''                     字典的用法
+'''
+#字典的值没有前后顺序
+#字典的结构必须是键值对结构 key:value
+t = {"name":"黄岭",'age':28,'学历':'大专'}
+# print(t['age']) #取值用中括号
+# t['high'] = '175cm' #增加键值对直接用中括号
+# print(t)
+# t['name'] = '王萧'  #修改键值对也是用中括号
+# print(t)
+# print(t.get('name')) #取值的第二种方法可以用get
+# print(t)
+# t.update(国籍='中国')
+# print(t)
+# t.update(fww=3)    #update是新增或者修改
+# print(t)           #update的key不能加引号，value可以加引号 
+# t.pop('fww')       #pop是剪切，字典同样适用
+t.update(high=175)
+t.update(国籍='中国')
+t.update(sex='男')
+print(t)
+'''用key取值和用get取值的区别'''
+print(t.get('name')) #name如果存在他们没有区别
+print(t['name'])     #name如果不存在用get会提示None，用key取值会报错
