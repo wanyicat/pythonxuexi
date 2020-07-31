@@ -109,7 +109,7 @@ print(a.count(False))    count是统计数量'''
 '''
 #字典的值没有前后顺序
 #字典的结构必须是键值对结构 key:value
-t = {"name":"黄岭",'age':28,'学历':'大专'}
+# t = {"name":"黄岭",'age':28,'学历':'大专'}
 # print(t['age']) #取值用中括号
 # t['high'] = '175cm' #增加键值对直接用中括号
 # print(t)
@@ -122,10 +122,22 @@ t = {"name":"黄岭",'age':28,'学历':'大专'}
 # t.update(fww=3)    #update是新增或者修改
 # print(t)           #update的key不能加引号，value可以加引号 
 # t.pop('fww')       #pop是剪切，字典同样适用
-t.update(high=175)
-t.update(国籍='中国')
-t.update(sex='男')
-print(t)
-'''用key取值和用get取值的区别'''
-print(t.get('name')) #name如果存在他们没有区别
-print(t['name'])     #name如果不存在用get会提示None，用key取值会报错
+# t.update(high=175)
+# t.update(国籍='中国')
+# t.update(sex='男')
+# print(t)
+# '''用key取值和用get取值的区别'''
+# print(t.get('name')) #name如果存在他们没有区别
+# print(t['name'])     #name如果不存在用get会提示None，用key取值会报错
+# del t['sex']
+# print(t)
+#数组字典的元素可以用del来删除
+
+# a = input('name:')
+# b = input('age:')
+# c = input('sex:')
+# u = {'name':a,'age':b,'sex':c}
+# print(u)
+
+# u = {'name':input('name:'),'age':input('age:'),'sex':input('sex:')}
+# print(u)
