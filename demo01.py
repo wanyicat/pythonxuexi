@@ -141,3 +141,58 @@ print(a.count(False))    count是统计数量'''
 
 # u = {'name':input('name:'),'age':input('age:'),'sex':input('sex:')}
 # print(u)
+'''                  Python第三章课程                 '''
+'''                     判断                          '''
+# age = int(input('请输入你的年龄:'))
+# if age > 20 and age < 30 :
+#     print('1')
+# elif age > 30 and age < 60 :
+#     print('2')
+# elif age > 60 :
+#     print('3')
+# else :
+#     print(True) 
+
+# a = ('你好不好')
+# if a in '你好吗' :                in的用法
+#     print('yes')
+# else:
+#     print('no')    
+
+# a = (0.88)
+# if type(a) is int :
+#     print('这是一个数字')
+# elif type(a) is str :
+#     print('这是一个字符串')    
+# elif type(a) is bool :            #is的用法：确认格式。
+#     print("这是布尔值")   
+# else :
+#     print('请输入正确的格式')     
+
+print('欢迎来到年龄阶段探测器')
+age = int(input('请输入你的年龄:'))
+if age == 18 :
+    print('你虽然已经成年了，但是学无止境。')
+elif  age < 18 :
+    if   age == 0 :
+        print('你还在妈妈的肚子里呢，别调皮。')
+    elif age <= 4 :
+        print('你还是个婴儿')
+    elif age > 4 and age <= 10 :
+        print('你就是个小屁孩')
+    else :
+        print('你还未成年')
+elif  age > 18 and age <= 30 :
+    print('要好好规划自己的未来')
+elif  age > 30 and age <= 60 :
+    print('家庭的重担压得你喘不过气吧')
+else :
+    print('你可以退休享受生活了')
+     
+
+       
+    
+
+    
+
+
