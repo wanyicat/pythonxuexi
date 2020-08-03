@@ -133,6 +133,14 @@
 # # print(t)
 # #数组字典的元素可以用del来删除
 
+'''字典中可以加入字典'''
+# a = {}
+# b =input('请输入账号:')
+# c =input('请输入密码：')
+# d ={b:c}                     
+# a.update(d)
+# print(a)
+
 # # a = input('name:')
 # # b = input('age:')
 # # c = input('sex:')
@@ -297,36 +305,216 @@
 #         if i >= 66  :
 #             print(c,'还有',69-i,'秒结束') 
 
+# a = 0
+# while a == 0 :
+#     for i in range(30,0,-1) :
+#         print('红灯还有'+str(i)+'秒结束')
+#     for i in range(35,0,-1) :
+#         print('绿灯还有'+str(i)+'秒结束')
+#     for i in range(3,0,-1) :
+#         print('黄灯还有'+str(i)+'秒结束')
+'''  range只能是整数，默认从小往大数，如上使用负数可以倒数
+     range(20,10,-1)  rang(-10,-5,1)   range(-6,-8,-1)                                                  
+'''
+# i = 1
+# while i < 10 :
+#     a = 30
+#     while a > 0 and a <= 30 :
+#         print('红灯还有',a,'秒')
+#         a = a - 1
+#     b = 35
+#     while b > 0 and b <= 35 :
+#         print('绿灯还有',b,'秒')   
+#         b = b - 1
+#     c = 3
+#     while c > 0 and  c <= 3 :
+#         print('黄灯还有',c,'秒')
+#         c = c - 1
+#     i = i + 1
+'''fomat和{}{}没有搞懂，要查找资料'''
+# light = {'红灯':30,
+#          '绿灯':35,
+#          '黄灯':3 }
+# t = 0
+# while t ==0 :
+#     for i in light :   '''此处i是字典里面的KEY，不是指一组键值对'''
+#         for j in range(light[i]) :
+#             print("{}还有{}秒".format(i,light[i]-j))
+#         print("======================================================")
+
 '''       登录模块       '''
-userlist ={}
-username = input('请输入账号：')
-a = len(username)
-b = ('abcdefghijklmnopqrstuvwxyz')
-if a >=5 and a <=8 :
-    if username[0] in b :
-        print('账号可以使用')
-        # password = input('请输入密码：')
-        # if len(password) >= 6 and len(password) <= 12 :
-        #     print('账号注册成功，3s后跳转页面')
-        #     # userlist.update(username = password)
-        #     userlist[username] = password
-        # else :
-        #     print('密码不规范，请重新输入')
-        #     exit()
-    else :
-        print('账号不合法，账号开头必须为小写字母')
-        exit()
-else :
-    print('账号不规范，请重新输入')
-    exit()
-password = input('请输入密码：')
-if len(password) >= 6 and len(password) <= 12 :
-    print('账号注册成功，3s后跳转页面')
-else :
-    print('密码不规范，请重新输入')
-    exit()
-userlist[username] = password
-print('用户账号密码',userlist)
+# userlist ={}
+# username = input('请输入账号：')
+# a = len(username)
+# b = ('abcdefghijklmnopqrstuvwxyz')
+# if a >=5 and a <=8 :
+#     if username[0] in b :
+#         print('账号可以使用')
+#         # password = input('请输入密码：')
+#         # if len(password) >= 6 and len(password) <= 12 :
+#         #     print('账号注册成功，3s后跳转页面')
+#         #     # userlist.update(username = password)
+#         #     userlist[username] = password
+#         # else :
+#         #     print('密码不规范，请重新输入')
+#         #     exit()
+#     else :
+#         print('账号不合法，账号开头必须为小写字母')
+#         exit()
+# else :
+#     print('账号不规范，请重新输入')
+#     exit()
+# # password = input('请输入密码：')
+# # if len(password) >= 6 and len(password) <= 12 :
+# #     print('账号注册成功，3s后跳转页面')
+# # else :
+# #     print('密码不规范，请重新输入')
+# #     exit()
+# # userlist[username] = password
+# # print('用户账号密码',userlist)
+'''     循环终止和跳过循环    '''
+# for i in range(10) :
+#     if i ==4 :
+#         break
+#     print(i)
+'''                 break是跳出循环，continue是跳过某一个循环。'''
+# for i in range(10) :
+#     if i ==4 :
+#         continue
+#     print(i)
+
+
+
+
+'''                        方法的定义(函数)                       '''
+# def jiafa(a,b,c) :
+#     '''三个数相加之和
+#     '''
+#     if type(a) is int and type(b) is int and type(c) is int :
+#         print(a+b+c)
+#     else:
+#         print('输入的数据类型不正确')
+# jiafa(10,11,0)  #打印出21
+# print(jiafa(10,18,6)) #打印出 34 None，原因是没有返回值。
+# '''   返回值   '''
+# def jiafa(a,b,c) :
+#     '''三个数相加之和
+#     '''
+#     if type(a) is int and type(b) is int and type(c) is int :
+#         return a+b+c
+#     else:
+#         return '输入的数据类型不正确'
+# jiafa(10,11,0)  #没有打印
+# print(jiafa(10,18,6))  #打印34 有了返回值
+
+
+'''    方法用法的实例  设计方法的时候可以用return来添加返回值   '''
+# def checkname(username) :
+#     if len(username) >= 5 and len(username) <= 8 :
+#         if username[0] in 'qwertyuioplkjhgfdsazxcvbnm' :
+#             return True
+#         else :
+#             return '账号必须为小写字母开头'
+#     else :
+#         return '账号长度必须为5到8位'
+
+# username = input('请输入账号：')
+# password = input('请输入密码：')
+# userlist = {}
+# if checkname(username) == True :
+#     if len(password) >=6 and len(password) <= 12 :
+#         print('账号注册成功')
+#         print({username:password})
+#         userlist.update({username:password})
+#         print(userlist)
+#     else :
+#         print('密码必须为6到12位')
+# else :
+#     print(checkname(username))
+
+
+'''异常捕获'''
+# try :
+#     print(a+1)
+# except :
+#     print('代码错误')
+
+'''异常类'''
+# try :
+#     print(a+1)
+# except Exception as c:
+#     print('代码错误',c)
+
+
+# def chekenp(a,b) :
+#     '''
+#     验证账号密码是否可用
+#     '''
+#     try :
+#         if len(a) >= 5 and len(a) <= 8 :
+#             if a[0] in 'qwertyuioplkjhgfdsazxcvbnm' :
+#                 if len(b) >=6 and len(b) <=12 :
+#                     return True
+#                 else :
+#                     return '密码必须为6到12位'
+#             else :
+#                 return '账号必须为小写字母开头'
+#         else :
+#             return '账号长度必须为5到8位'
+#     except :
+#         return '账号或密码不合法'
+
+# x = input('请输入账号：')
+# y = input('请输入密码：')
+# if chekenp(x,y) == True :
+#     print('恭喜你，账号创建成功')
+# else :
+#     print(chekenp(x,y))
+
+''' 代码的单位从小到大分别为：变量 方法 类 模块 包     '''
+'''  安装包 pip install + 包的名字                               
+     卸载包 pip uninstall + 包的名字
+     查看包 pip list  
+     使用包 import +包的名字
+'''
+# import time 
+# for i in range(10) :
+#     time.sleep(1)         '''停顿一秒'''
+    # print(i)
+
+# import random
+# i = random.randint(100,50000) '''随机数'''
+# print(i)
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+
+
     
 
 
